@@ -1,3 +1,4 @@
+localStorage.removeItem('apps'); // حذف التطبيقات المخزنة سابقًا تلقائيًا
 $(document).ready(function () {
 
   // دالة لإظهار/إخفاء التفاصيل
@@ -71,3 +72,4 @@ $(document).ready(function () {
     toggleDetails();
   }
 });
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيقات الذكاء الاصطناعي</title>
+
+ 
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="AbuotUs.html">من نحن</a>
+    <a href="Appliances.html">التطبيقات</a>
+    <a href="add_app.html">إضافة تطبيق</a>
+  </nav>
+
+  <h1>قائمة تطبيقات الذكاء الاصطناعي</h1>
+
+  <table id="appsTable">
+  <thead>
+    <tr>
+      <th>اسم التطبيق</th>
+      <th>الشركة المطورة</th>
+      <th>مجال الاستخدام</th>
+      <th>مجاني / غير مجاني</th>
+      <th>عرض التفاصيل</th>
+    </tr>
+  </thead>
+
+  <!-- tbody للتطبيقات الثابتة -->
+  <tbody id="staticApps">
+      <!-- التطبيق 1 -->
+      <tr>
+        <td>ChatGPT</td>
+        <td>OpenAI</td>
+        <td>المحادثة والتوليد النصي</td>
+          <td><span class="check-box">✅</span></td>
+        <td><button class="show-details-btn" data-target="app1">إظهار التفاصيل</button></td>
+      </tr>
+      <tr id="app1" class="details" style="display:none;">
+        <td colspan="5">
+          <div class="details-container">
+            <img src="images/logo1.webp" class="logo" alt="ChatGPT logo">
+            <div>
+              <strong>وصف:</strong> ChatGPT هو مساعد ذكي لتوليد النصوص بطريقة طبيعية.<br>
+              <strong>الموقع:</strong> <a href="https://chat.openai.com" target="_blank">https://chat.openai.com</a><br>
+              <strong>فيديو تعريفي:</strong><br>
+              <iframe src="https://www.youtube.com/embed/K-uHSzHkSdo" allowfullscreen></iframe>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- التطبيق 2 -->
+      <tr>
+        <td>Grammarly</td>
+        <td>Grammarly Inc.</td>
+        <td>تحسين الكتابة باللغة الإنجليزية</td>
+        <td><span class="check-box">✅</span></td>
+        <td><button class="show-details-btn" data-target="app2">إظهار التفاصيل</button></td>
+      </tr>
+      <tr id="app2" class="details" style="display:none;">
+        <td colspan="5">
+          <div class="details-container">
+            <img src="images/logo2.webp" class="logo" alt="Grammarly logo">
+            <div>
+              <strong>وصف:</strong> مساعد كتابة يعتمد على الذكاء الاصطناعي.<br>
+              <strong>الموقع:</strong> <a href="https://www.grammarly.com" target="_blank">https://www.grammarly.com</a><br>
+              <strong>فيديو تعريفي:</strong><br>
+              <iframe src="https://www.youtube.com/embed/E8dTMSTzNzk" allowfullscreen></iframe>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- التطبيق 3 -->
+      <tr>
+        <td>Claude</td>
+        <td>Anthropic</td>
+        <td>المحادثة والتحليل النصي</td>
+        <td><span class="status-box paid">❌</span></td>
+        <td><button class="show-details-btn" data-target="app3">إظهار التفاصيل</button></td>
+      </tr>
+      <tr id="app3" class="details" style="display:none;">
+        <td colspan="5">
+          <div class="details-container">
+            <img src="images/logo3.webp" class="logo" alt="Claude logo">
+            <div>
+              <strong>وصف:</strong> Claude هو مساعد ذكي يركّز على الأمان والوضوح.<br>
+              <strong>الموقع:</strong> <a href="https://claude.ai" target="_blank">https://claude.ai</a><br>
+              <strong>فيديو تعريفي:</strong><br>
+              <iframe src="https://www.youtube.com/embed/_g786Zc6q3s" allowfullscreen></iframe>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- التطبيق 4 -->
+      <tr>
+        <td>Google Gemini</td>
+        <td>Google</td>
+        <td>المساعدة الذكية والبحث</td>
+        <td><span class="check-box">✅</span></td>
+        <td><button class="show-details-btn" data-target="app4">إظهار التفاصيل</button></td>
+      </tr>
+      <tr id="app4" class="details" style="display:none;">
+        <td colspan="5">
+          <div class="details-container">
+            <img src="images/logo4.webp" class="logo" alt="Gemini logo">
+            <div>
+              <strong>وصف:</strong> Gemini يقدم تجربة ذكاء اصطناعي متكاملة.<br>
+              <strong>الموقع:</strong> <a href="https://gemini.google.com" target="_blank">https://gemini.google.com</a><br>
+              <strong>فيديو تعريفي:</strong><br>
+              <iframe src="https://www.youtube.com/embed/ZCaCPAlfkyY" allowfullscreen></iframe>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- التطبيق 5 -->
+      <tr>
+        <td>Copilot</td>
+        <td>Microsoft</td>
+        <td>المساعدة في البرمجة</td>
+        <td><span class="status-box paid">❌</span></td>
+        <td><button class="show-details-btn" data-target="app5">إظهار التفاصيل</button></td>
+      </tr>
+      <tr id="app5" class="details" style="display:none;">
+        <td colspan="5">
+          <div class="details-container">
+            <img src="images/logo5.webp" class="logo" alt="Copilot logo">
+            <div>
+              <strong>وصف:</strong> Microsoft Copilot يساعد المطورين على كتابة الكود بسرعة.<br>
+              <strong>الموقع:</strong> <a href="https://copilot.microsoft.com" target="_blank">https://copilot.microsoft.com</a><br>
+              <strong>فيديو تعريفي:</strong><br>
+              <iframe src="https://www.youtube.com/embed/CPXzKiMbcW8" allowfullscreen></iframe>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    
+    <tbody id="dynamicApps"></tbody>
+  </table>
+ 
+<template id="appTemplate">
+  <tr class="app-row">
+    <td class="app-name"></td>
+    <td class="app-company"></td>
+    <td class="app-field"></td>
+    <td class="app-free"></td>
+    <td><button class="show-details-btn">إظهار التفاصيل</button></td>
+</button>
+
+  </tr>
+  <tr class="app-details" style="display:none;">
+    <td colspan="5">
+      <div class="details-container">
+        <div>
+          <strong>وصف:</strong> <span class="app-desc"></span><br>
+          <strong>الموقع:</strong> <a class="app-website" href="#" target="_blank"></a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</template>
+
+  
+</button>
+
+
+
+
+</body>
+</html>

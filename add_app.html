@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>إضافة تطبيق جديد</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="myFunctions.js"></script>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="AbuotUs.html">من نحن</a>
+    <a href="Appliances.html">التطبيقات</a>
+    <a href="add_app.html">إضافة تطبيق</a>
+  </nav>
+
+  <h1>إدخال معلومات تطبيق جديد</h1>
+
+  <form id="appForm">
+    <table class="form-table">
+      <tr>
+        <th>اسم التطبيق (بالإنكليزية فقط بدون فراغات):</th>
+        <td><input type="text" id="appName" placeholder="AppName" required></td>
+      </tr>
+      <tr>
+        <th>اسم الشركة المطوّرة (بالإنكليزية فقط):</th>
+        <td><input type="text" id="company" placeholder="CompanyName" required></td>
+      </tr>
+      <tr>
+        <th>رابط الموقع الإلكتروني (URL):</th>
+        <td><input type="url" id="website" placeholder="https://example.com" required></td>
+      </tr>
+      <tr>
+        <th>مجاني / غير مجاني:</th>
+        <td>
+          <select id="free">
+            <option value="مجاني">مجاني</option>
+            <option value="غير مجاني">غير مجاني</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>مجال الاستخدام:</th>
+        <td>
+          <select id="field">
+            <option value="Education">Education</option>
+            <option value="Robotics">Robotics</option>
+            <option value="E-Commerce">E-Commerce</option>
+            <option value="Design">Design</option>
+            <option value="Translation">Translation</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>شرح مختصر عن التطبيق:</th>
+        <td><textarea id="description" rows="4" placeholder="أدخل وصفًا مختصرًا..." required></textarea></td>
+      </tr>
+    </table>
+
+    <div class="buttons">
+      <button type="button" id="submitBtn">إرسال</button>
+      <button type="button" id="resetBtn">إعادة</button>
+    </div>
+  </form>
+
+</body>
+</html>
+
+

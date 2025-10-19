@@ -1,7 +1,6 @@
-localStorage.removeItem('apps'); // حذف التطبيقات المخزنة سابقًا تلقائيًا
 $(document).ready(function () {
 
-  // دالة لإظهار/إخفاء التفاصيل
+  // دالة لإظهار/إخفاء التفاصيل لجميع الأزرار
   function toggleDetails() {
     $(".show-details-btn").off("click").on("click", function() {
       const targetId = $(this).data("target");
@@ -10,9 +9,8 @@ $(document).ready(function () {
       $(this).text($row.is(":visible") ? "إخفاء التفاصيل" : "إظهار التفاصيل");
     });
   }
-  toggleDetails();
 
-  // إضافة التطبيقات في add_app.html
+  /*** صفحة إضافة تطبيق (add_app.html) ***/
   if (window.location.pathname.endsWith("add_app.html")) {
     $("#submitBtn").on("click", function () {
       const name = $("#appName").val().trim();
@@ -45,7 +43,7 @@ $(document).ready(function () {
     });
   }
 
-  // عرض التطبيقات المخزنة في Appliances.html
+  /*** صفحة عرض التطبيقات (Appliances.html) ***/
   if (window.location.pathname.endsWith("Appliances.html")) {
     const apps = JSON.parse(localStorage.getItem("apps")) || [];
     const $dynamicTable = $("#dynamicApps");
@@ -71,5 +69,5 @@ $(document).ready(function () {
     // تفعيل أزرار التفاصيل بعد إضافة كل التطبيقات
     toggleDetails();
   }
-});
 
+});

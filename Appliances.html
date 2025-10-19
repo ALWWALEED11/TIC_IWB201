@@ -148,10 +148,31 @@
     
 
 
+<template id="appTemplate">
+  <tr class="app-row">
+    <td class="app-name"></td>
+    <td class="app-company"></td>
+    <td class="app-field"></td>
+    <td class="app-free"></td>
+    <td><button class="show-details-btn">إظهار التفاصيل</button></td>
+</button>
 
+  </tr>
+  <tr class="app-details" style="display:none;">
+    <td colspan="5">
+      <div class="details-container">
+        <div>
+          <strong>وصف:</strong> <span class="app-desc"></span><br>
+          <strong>الموقع:</strong> <a class="app-website" href="#" target="_blank"></a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</template>
 
 
 
 </body>
 </html>
+
 

@@ -69,5 +69,4 @@ $(document).ready(function () {
     // تفعيل أزرار التفاصيل بعد إضافة كل التطبيقات
     toggleDetails();
   }
-
 });
